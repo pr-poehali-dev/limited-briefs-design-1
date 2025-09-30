@@ -1,5 +1,6 @@
 import { Link, useLocation } from 'react-router-dom';
 import Icon from '@/components/ui/icon';
+import CartSheet from './CartSheet';
 
 const Navigation = () => {
   const location = useLocation();
@@ -31,9 +32,7 @@ const Navigation = () => {
                 {link.label}
               </Link>
             ))}
-            <button className="p-2 hover:bg-muted rounded-full transition-colors">
-              <Icon name="ShoppingBag" className="w-5 h-5" />
-            </button>
+            <CartSheet />
           </div>
         </div>
       </div>

@@ -4,8 +4,13 @@ import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import Icon from '@/components/ui/icon';
 import { Link } from 'react-router-dom';
+import { useCart } from '@/contexts/CartContext';
+import { useToast } from '@/hooks/use-toast';
 
 const Index = () => {
+  const { addItem } = useCart();
+  const { toast } = useToast();
+
   const featuredProducts = [
     {
       id: 1,
@@ -29,6 +34,14 @@ const Index = () => {
       badge: 'New'
     }
   ];
+
+  const handleAddToCart = (product: typeof featuredProducts[0]) => {
+    addItem(product);
+    toast({
+      title: 'Добавлено в корзину',
+      description: product.name,
+    });
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-muted">
@@ -93,7 +106,12 @@ const Index = () => {
                   <h3 className="font-playfair text-xl font-semibold mb-2">{product.name}</h3>
                   <div className="flex items-center justify-between">
                     <span className="text-2xl font-semibold">{product.price} ₽</span>
-                    <Button size="sm" variant="ghost" className="group-hover:bg-secondary group-hover:text-primary transition-colors">
+                    <Button 
+                      size="sm" 
+                      variant="ghost" 
+                      className="group-hover:bg-secondary group-hover:text-primary transition-colors"
+                      onClick={() => handleAddToCart(product)}
+                    >
                       <Icon name="Plus" className="w-4 h-4" />
                     </Button>
                   </div>

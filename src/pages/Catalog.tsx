@@ -4,9 +4,21 @@ import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import Icon from '@/components/ui/icon';
 import { useState } from 'react';
+import { useCart } from '@/contexts/CartContext';
+import { useToast } from '@/hooks/use-toast';
 
 const Catalog = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
+  const { addItem } = useCart();
+  const { toast } = useToast();
+
+  const handleAddToCart = (product: typeof products[0]) => {
+    addItem(product);
+    toast({
+      title: 'Добавлено в корзину',
+      description: product.name,
+    });
+  };
 
   const products = [
     {
@@ -128,7 +140,10 @@ const Catalog = () => {
                     <span className="text-2xl font-semibold">{product.price} ₽</span>
                   </div>
                   <div className="flex gap-2">
-                    <Button className="flex-1 bg-primary hover:bg-primary/90 text-primary-foreground">
+                    <Button 
+                      className="flex-1 bg-primary hover:bg-primary/90 text-primary-foreground"
+                      onClick={() => handleAddToCart(product)}
+                    >
                       <Icon name="ShoppingCart" className="w-4 h-4 mr-2" />
                       В корзину
                     </Button>
