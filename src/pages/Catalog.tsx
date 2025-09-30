@@ -23,59 +23,58 @@ const Catalog = () => {
   const products = [
     {
       id: 1,
-      name: 'Silk Lace Bralette',
-      price: '12 000',
-      image: '/img/8a47c21f-3df6-449b-b8c7-77dc9eed9c62.jpg',
-      badge: 'Exclusive',
-      category: 'bralette'
+      name: 'Black Gold Edition',
+      price: '4 990',
+      image: '/img/0333e6aa-42ed-4d34-973e-65d06827656b.jpg',
+      badge: 'Limited',
+      category: 'classic'
     },
     {
       id: 2,
-      name: 'Premium Satin Brief',
-      price: '8 500',
-      image: '/img/c999eada-1885-45d2-8c99-e24861cbd774.jpg',
-      badge: 'Limited',
-      category: 'brief'
+      name: 'Navy Premium',
+      price: '3 790',
+      image: '/img/73abeac9-162b-4b9b-9fd7-84ae148bc5bf.jpg',
+      badge: 'Exclusive',
+      category: 'classic'
     },
     {
       id: 3,
-      name: 'Pearl White Set',
-      price: '15 000',
-      image: '/img/293f572e-927c-445d-b165-1a66a8979e8b.jpg',
+      name: 'Burgundy Lux',
+      price: '5 490',
+      image: '/img/f38d22ef-88d2-4770-b30a-b1dbfebda8ca.jpg',
       badge: 'New',
-      category: 'set'
+      category: 'premium'
     },
     {
       id: 4,
-      name: 'Black Lace Collection',
-      price: '13 500',
-      image: '/img/8a47c21f-3df6-449b-b8c7-77dc9eed9c62.jpg',
+      name: 'Midnight Black',
+      price: '4 290',
+      image: '/img/0333e6aa-42ed-4d34-973e-65d06827656b.jpg',
       badge: 'Bestseller',
-      category: 'bralette'
+      category: 'classic'
     },
     {
       id: 5,
-      name: 'Cream Silk Brief',
-      price: '7 000',
-      image: '/img/c999eada-1885-45d2-8c99-e24861cbd774.jpg',
+      name: 'Ocean Blue',
+      price: '3 990',
+      image: '/img/73abeac9-162b-4b9b-9fd7-84ae148bc5bf.jpg',
       badge: 'New',
-      category: 'brief'
+      category: 'classic'
     },
     {
       id: 6,
-      name: 'Exclusive White Set',
-      price: '18 000',
-      image: '/img/293f572e-927c-445d-b165-1a66a8979e8b.jpg',
+      name: 'Royal Wine',
+      price: '5 790',
+      image: '/img/f38d22ef-88d2-4770-b30a-b1dbfebda8ca.jpg',
       badge: 'Exclusive',
-      category: 'set'
+      category: 'premium'
     }
   ];
 
   const categories = [
-    { id: 'all', name: 'Все изделия' },
-    { id: 'bralette', name: 'Бралетты' },
-    { id: 'brief', name: 'Трусы' },
-    { id: 'set', name: 'Комплекты' }
+    { id: 'all', name: 'Все модели' },
+    { id: 'classic', name: 'Классика' },
+    { id: 'premium', name: 'Премиум' }
   ];
 
   const filteredProducts = selectedCategory === 'all' 
@@ -89,9 +88,9 @@ const Catalog = () => {
       <section className="pt-32 pb-12 px-6">
         <div className="container mx-auto">
           <div className="max-w-3xl mx-auto text-center animate-fade-in">
-            <h1 className="font-playfair text-5xl md:text-6xl font-bold mb-4">Каталог коллекции</h1>
+            <h1 className="font-playfair text-5xl md:text-6xl font-bold mb-4">Полный каталог</h1>
             <p className="text-lg text-muted-foreground">
-              Эксклюзивные изделия ручной работы из премиальных тканей
+              Лимитированные трусы из премиальных тканей. Всего 100 штук каждой модели
             </p>
           </div>
         </div>
@@ -167,9 +166,9 @@ const Catalog = () => {
 
       <section className="py-16 px-6 bg-muted">
         <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="font-playfair text-3xl font-bold mb-4">Не нашли нужный размер?</h2>
+          <h2 className="font-playfair text-3xl font-bold mb-4">Успей купить!</h2>
           <p className="text-lg text-muted-foreground mb-6">
-            Мы создаем изделия на заказ с учетом ваших индивидуальных параметров
+            Каждая модель продается только один раз. После распродажи — навсегда
           </p>
           <Button size="lg" variant="outline" className="border-2">
             <Icon name="Mail" className="mr-2 w-5 h-5" />

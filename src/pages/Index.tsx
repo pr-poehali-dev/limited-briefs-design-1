@@ -14,23 +14,23 @@ const Index = () => {
   const featuredProducts = [
     {
       id: 1,
-      name: 'Silk Lace Bralette',
-      price: '12 000',
-      image: '/img/8a47c21f-3df6-449b-b8c7-77dc9eed9c62.jpg',
-      badge: 'Exclusive'
-    },
-    {
-      id: 2,
-      name: 'Premium Satin Brief',
-      price: '8 500',
-      image: '/img/c999eada-1885-45d2-8c99-e24861cbd774.jpg',
+      name: 'Black Gold Edition',
+      price: '4 990',
+      image: '/img/0333e6aa-42ed-4d34-973e-65d06827656b.jpg',
       badge: 'Limited'
     },
     {
+      id: 2,
+      name: 'Navy Premium',
+      price: '3 790',
+      image: '/img/73abeac9-162b-4b9b-9fd7-84ae148bc5bf.jpg',
+      badge: 'Exclusive'
+    },
+    {
       id: 3,
-      name: 'Pearl White Set',
-      price: '15 000',
-      image: '/img/293f572e-927c-445d-b165-1a66a8979e8b.jpg',
+      name: 'Burgundy Lux',
+      price: '5 490',
+      image: '/img/f38d22ef-88d2-4770-b30a-b1dbfebda8ca.jpg',
       badge: 'New'
     }
   ];
@@ -50,18 +50,18 @@ const Index = () => {
       <section className="pt-32 pb-20 px-6">
         <div className="container mx-auto">
           <div className="max-w-4xl mx-auto text-center animate-fade-in">
-            <Badge className="mb-6 bg-gradient-to-r from-secondary to-amber-600 text-primary border-0 px-6 py-2 text-sm">
+            <Badge className="mb-6 bg-gradient-to-r from-orange-500 to-red-600 text-white border-0 px-6 py-2 text-sm font-semibold">
               Лимитированная коллекция 2025
             </Badge>
             <h1 className="font-playfair text-6xl md:text-7xl font-bold mb-6 tracking-tight">
-              Эксклюзивное белье <br />
-              <span className="bg-gradient-to-r from-secondary via-amber-600 to-secondary bg-clip-text text-transparent">
-                ручной работы
+              Трусы премиум класса <br />
+              <span className="bg-gradient-to-r from-orange-500 via-red-500 to-orange-500 bg-clip-text text-transparent">
+                ограниченный тираж
               </span>
             </h1>
             <p className="text-lg text-muted-foreground mb-10 max-w-2xl mx-auto leading-relaxed">
-              Откройте для себя изысканный комфорт и утонченность дизайна. 
-              Каждое изделие создается вручную из премиальных материалов в ограниченном количестве.
+              Дизайнерские модели в лимитированных количествах. Эксклюзивные ткани, уникальный крой и невероятный комфорт.
+              Каждая коллекция выходит тиражом всего 100 штук.
             </p>
             <div className="flex items-center justify-center gap-4">
               <Link to="/catalog">
@@ -81,8 +81,8 @@ const Index = () => {
       <section className="py-20 px-6">
         <div className="container mx-auto">
           <div className="text-center mb-16">
-            <h2 className="font-playfair text-4xl md:text-5xl font-bold mb-4">Избранные модели</h2>
-            <p className="text-muted-foreground text-lg">Тщательно отобранные изделия из новой коллекции</p>
+            <h2 className="font-playfair text-4xl md:text-5xl font-bold mb-4">Топовые модели</h2>
+            <p className="text-muted-foreground text-lg">Самые популярные трусы из лимитированных серий</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -122,30 +122,29 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-20 px-6 bg-gradient-to-r from-primary via-zinc-900 to-primary text-primary-foreground">
+      <section className="py-20 px-6 bg-gradient-to-r from-orange-600 via-red-600 to-orange-600 text-white">
         <div className="container mx-auto max-w-4xl text-center">
-          <Icon name="Award" className="w-16 h-16 mx-auto mb-6 text-secondary" />
-          <h2 className="font-playfair text-4xl md:text-5xl font-bold mb-6">Премиальное качество</h2>
-          <p className="text-lg mb-8 opacity-90 leading-relaxed">
-            Мы используем только натуральные ткани высочайшего качества: 
-            шёлк, кружево ручной работы и органический хлопок. 
-            Каждое изделие проходит строгий контроль качества.
+          <Icon name="Flame" className="w-16 h-16 mx-auto mb-6" />
+          <h2 className="font-playfair text-4xl md:text-5xl font-bold mb-6">Почему мы?</h2>
+          <p className="text-lg mb-8 opacity-95 leading-relaxed">
+            Используем только премиальные ткани: микрофибра с модалом, мерсеризованный хлопок и бамбуковое волокно.
+            Все модели разработаны дизайнерами и выпускаются ограниченными тиражами.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
             <div className="flex flex-col items-center">
-              <Icon name="Sparkles" className="w-12 h-12 mb-4 text-secondary" />
-              <h3 className="font-playfair text-xl font-semibold mb-2">Ручная работа</h3>
-              <p className="text-sm opacity-80">Каждый шов выполнен вручную</p>
+              <Icon name="Zap" className="w-12 h-12 mb-4" />
+              <h3 className="font-playfair text-xl font-semibold mb-2">Лимитированные</h3>
+              <p className="text-sm opacity-90">Всего 100 штук каждой модели</p>
             </div>
             <div className="flex flex-col items-center">
-              <Icon name="Shield" className="w-12 h-12 mb-4 text-secondary" />
-              <h3 className="font-playfair text-xl font-semibold mb-2">Гарантия качества</h3>
-              <p className="text-sm opacity-80">Пожизненная гарантия на изделия</p>
+              <Icon name="Award" className="w-12 h-12 mb-4" />
+              <h3 className="font-playfair text-xl font-semibold mb-2">Дизайнерские</h3>
+              <p className="text-sm opacity-90">Эксклюзивные принты и крой</p>
             </div>
             <div className="flex flex-col items-center">
-              <Icon name="Package" className="w-12 h-12 mb-4 text-secondary" />
-              <h3 className="font-playfair text-xl font-semibold mb-2">Премиум упаковка</h3>
-              <p className="text-sm opacity-80">Элегантная подарочная коробка</p>
+              <Icon name="Heart" className="w-12 h-12 mb-4" />
+              <h3 className="font-playfair text-xl font-semibold mb-2">Комфортные</h3>
+              <p className="text-sm opacity-90">Идеальная посадка и дышащие ткани</p>
             </div>
           </div>
         </div>
@@ -157,7 +156,7 @@ const Index = () => {
             <Icon name="Crown" className="w-6 h-6" />
             <span className="font-playfair text-xl font-semibold">BOLSHIE YAYCA</span>
           </div>
-          <p className="text-sm text-muted-foreground mb-6">Эксклюзивное белье ручной работы</p>
+          <p className="text-sm text-muted-foreground mb-6">Лимитированные трусы премиум класса</p>
           <div className="flex items-center justify-center space-x-6">
             <Link to="/catalog" className="text-sm hover:text-secondary transition-colors">Каталог</Link>
             <Link to="/contacts" className="text-sm hover:text-secondary transition-colors">Контакты</Link>
