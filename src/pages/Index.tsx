@@ -155,14 +155,14 @@ const Index = () => {
         <div className="container mx-auto text-center">
           <div className="flex items-center justify-center space-x-2 mb-4">
             <Icon name="Crown" className="w-6 h-6" />
-            <span className="font-playfair text-xl font-semibold">LUXURY COLLECTION</span>
+            <span className="font-playfair text-xl font-semibold">BOLSHIE YAYCA</span>
           </div>
           <p className="text-sm text-muted-foreground mb-6">Эксклюзивное белье ручной работы</p>
           <div className="flex items-center justify-center space-x-6">
             <Link to="/catalog" className="text-sm hover:text-secondary transition-colors">Каталог</Link>
             <Link to="/contacts" className="text-sm hover:text-secondary transition-colors">Контакты</Link>
           </div>
-          <p className="text-xs text-muted-foreground mt-8">© 2025 Luxury Collection. Все права защищены.</p>
+          <p className="text-xs text-muted-foreground mt-8">© 2025 Bolshie Yayca. Все права защищены.</p>
         </div>
       </footer>
     </div>

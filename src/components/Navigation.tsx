@@ -17,7 +17,7 @@ const Navigation = () => {
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center space-x-2">
             <Icon name="Crown" className="w-6 h-6" />
-            <span className="font-playfair text-2xl font-semibold tracking-tight">LUXURY COLLECTION</span>
+            <span className="font-playfair text-2xl font-semibold tracking-tight">BOLSHIE YAYCA</span>
           </Link>
           
           <div className="flex items-center space-x-8">
